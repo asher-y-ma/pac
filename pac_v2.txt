@@ -2,6 +2,10 @@ function FindProxyForURL(url, host)
 {
     url  = url.toLowerCase();
     host = host.toLowerCase();
-
+    
+    if (shExpMatch(url,"*ytaso.com")
+    ) {
+       return "DIRECT";
+    }
     return "PROXY 127.0.0.1:8888";
 }
