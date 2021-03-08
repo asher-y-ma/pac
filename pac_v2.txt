@@ -14,7 +14,7 @@ function FindProxyForURL(url, host)
     if (shExpMatch(url,"*googleusercontent.com")
       || shExpMatch(url,"*gvt1.com")
     ) {
-       return "SOCKS 127.0.0.1:8888";
+       return "PROXY 127.0.0.1:8888";
     }
-    return "PROXY 127.0.0.1:9999; 127.0.0.1:8888";
+    return "PROXY 127.0.0.1:9999; PROXY 127.0.0.1:8888";
 }
